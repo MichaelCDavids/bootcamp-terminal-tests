@@ -1,0 +1,21 @@
+let findItemsOver = require('../findItemsOver');
+let assert = require('assert');
+
+describe('The findItemsOver function',function(){
+  it('should take in a list of objects and return how many items over the threshold',function(){
+    assert.equal(findItemsOver([
+      {name : 'apples', qty : 9},
+      {name : 'pears', qty : 37},
+      {name : 'bananas', qty : 27},
+      {name : 'apples', qty : 3},
+    ],10),2);
+  });
+  it('should take in a list of objects and return how many items over the threshold',function(){
+    assert.equal(findItemsOver([
+      {name : 'apples', qty : 9},
+      {name : 'pears', qty : 37},
+      {name : 'bananas', qty : 27},
+      {name : 'apples', qty : 3},
+    ],4),3);
+  });
+});
